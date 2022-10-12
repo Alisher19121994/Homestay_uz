@@ -13,27 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
-        <activity
-            android:name=".Bottom_menu_more_Activity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Bottom_menu_notifications_Activity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Bottom_menu_rent_adds_Activity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
+
         <activity
             android:name=".activities.SplashActivity"
             android:exported="true">
@@ -43,10 +24,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
+        <activity android:name=".activities.Bottom_menu_more_Activity" />
+        <activity android:name=".activities.Bottom_menu_notifications_Activity" />
+        <activity android:name=".activities.Bottom_menu_rent_adds_Activity" />
+        <activity android:name=".activities.Bottom_menu_favorite_Activity" />
         <activity android:name=".activities.Bottom_menu_home_Activity" />
         <activity android:name=".activities.SearchActivity" />
         <activity android:name=".activities.OnboardingActivity" />
         <activity android:name=".activities.MainActivity" />
+
+
     </application>
 
 </manifest>
