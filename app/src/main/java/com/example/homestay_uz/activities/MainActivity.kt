@@ -16,9 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView_itemViews: RecyclerView
     private var context: Context? = null
 
-    private var menu: ImageView? = null
     private var search: ImageView? = null
-    private var more: ImageView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,9 +34,7 @@ class MainActivity : AppCompatActivity() {
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         recyclerView_itemViews.isNestedScrollingEnabled = false
 
-        menu = findViewById(R.id.main_menu_id)
         search = findViewById(R.id.main_search_id)
-        more = findViewById(R.id.main_more_id)
 
 
         search?.setOnClickListener {

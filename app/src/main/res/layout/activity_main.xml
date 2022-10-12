@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".activities.MainActivity">
 
 
@@ -29,23 +29,17 @@
                 android:gravity="center_vertical"
                 android:padding="10dp">
 
-                <ImageView
-                    android:id="@+id/main_menu_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="2sp"
-                    android:src="@drawable/ic_baseline_menu_24" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="3sp"
                     android:layout_weight="1"
                     android:fontFamily="@font/billabong"
                     android:text="@string/homestay_uz"
                     android:textAllCaps="false"
                     android:textColor="#74B838"
-                    android:layout_marginTop="3sp"
-                    android:layout_marginStart="3dp"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -56,27 +50,14 @@
                     android:layout_marginEnd="10sp"
                     android:src="@drawable/ic_baseline_search_24" />
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/main_more_id"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:padding="1dp"
-                    app:strokeColor="#8AD647"
-                    app:strokeWidth="1.5dp"
-                    android:layout_marginEnd="6sp"
-                    app:shapeAppearanceOverlay="@style/circle"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/home_4" />
-
 
             </LinearLayout>
 
         </Toolbar>
 
 
-
     </com.google.android.material.appbar.AppBarLayout>
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -91,7 +72,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="400dp">
+                android:layout_height="305dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="match_parent"
@@ -102,21 +83,22 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="bottom">
+                    android:layout_height="140dp"
+                    android:layout_marginTop="161dp"
+                    >
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerview_main_horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp" />
+                        android:layout_height="match_parent" />
                 </LinearLayout>
 
             </FrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="3.5dp"
-                android:background="#95CBCBCB" />
+                android:layout_height="4.5dp"
+                android:background="#CBCBCB" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -125,8 +107,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview_main_vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
 
@@ -134,5 +115,21 @@
 
     </androidx.core.widget.NestedScrollView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_background_views">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16sp"
+            app:itemIconTint="@color/menu_tint_color"
+            android:background="@android:color/transparent"
+            app:menu="@menu/navigationview_bottom_menu" />
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
