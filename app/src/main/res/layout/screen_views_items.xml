@@ -3,18 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="6.5dp">
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:orientation="vertical">
 
 
     <LinearLayout
-        android:layout_width="130dp"
-        android:layout_height="180sp"
+        android:id="@+id/linearLayoutHorizontalOfItems_id"
+        android:layout_width="100dp"
+        android:layout_height="138sp"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/additional_list_items_textName_id"
+            android:id="@+id/list_items_textName_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lists"
@@ -24,15 +26,17 @@
             android:textStyle="bold" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/additional_list_items_image_id"
-            android:layout_width="130dp"
-            android:layout_height="160dp"
+            android:id="@+id/list_items_image_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:elevation="0dp"
             android:src="@drawable/portrait"
             app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView"
-            app:strokeColor="#ffffff"
-            app:strokeWidth="2.5dp" />
+            app:strokeColor="#0288D1"
+            android:padding="1dp"
+            app:strokeWidth="2dp" />
 
     </LinearLayout>
 

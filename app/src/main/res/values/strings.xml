@@ -10,4 +10,8 @@
     <string name="home">Home</string>
     <string name="notifications">Notifications</string>
     <string name="rent_adds">Rent adds</string>
+    <string name="search_for_homestay_uz">Search for homestay.uz</string>
+    <string name="homeoftext">homeOfText</string>
+    <string name="price">price</string>
+    <string name="comments">comments</string>
 </resources>

@@ -5,24 +5,24 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
-import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homestay_uz.R
-import com.example.homestay_uz.adapters.AdditionalsAdapter
-import com.example.homestay_uz.models.Items
-import com.google.android.material.bottomnavigation.BottomNavigationItemView
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.homestay_uz.adapters.ScreenAddsViewAdapter
+import com.example.homestay_uz.adapters.ScreenViewAdapter
+import com.example.homestay_uz.models.ScreenAddsView
+
+import com.example.homestay_uz.models.ScreenView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var recyclerView_itemViews: RecyclerView
+    private lateinit var recyclerViewOfItemViews: RecyclerView
+    private lateinit var recyclerViewOfAddsView: RecyclerView
     private var context: Context? = null
-    private var search: ImageView? = null
-    private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var searchForHomeStayOfTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,53 +35,70 @@ class MainActivity : AppCompatActivity() {
 
         context = this
 
-        recyclerView_itemViews = findViewById(R.id.recyclerview_main_horizontal)
-        recyclerView_itemViews.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        recyclerView_itemViews.isNestedScrollingEnabled = false
-
-        search = findViewById(R.id.main_search_id)
+        recyclerViewOfItemViews = findViewById(R.id.recyclerview_main_horizontal)
+        recyclerViewOfItemViews.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewOfItemViews.isNestedScrollingEnabled = false
 
 
-        search?.setOnClickListener {
+        recyclerViewOfAddsView = findViewById(R.id.recyclerview_main_vertical)
+        recyclerViewOfAddsView.layoutManager = GridLayoutManager(this, 1)
+
+
+        searchForHomeStayOfTextView = findViewById(R.id.searchForHomeStayTextView)
+        searchForHomeStayOfTextView.setOnClickListener {
             openSearchPage()
         }
 
 
-        // additionalItemsAdapter(dataOfAdditionalItems())
-
+        refreshScreenViewAdapter(getScreenViewData())
+        refreshScreenAddsViewAdapter(getScreenAddsViewData())
     }
 
+    private fun getScreenAddsViewData(): ArrayList<ScreenAddsView> {
+        val listOfScreenAddsView = ArrayList<ScreenAddsView>()
+
+        for (index in 1..100) {
+            listOfScreenAddsView.add(
+                ScreenAddsView(
+                    R.drawable.h, "Tashkent region Chirchik 5/60 home", "$150",
+                    "Room size is 3,The rent house gets included in gas,water,bills and other facilities!"
+                )
+            )
+        }
+
+        return listOfScreenAddsView
+    }
+
+    private fun refreshScreenAddsViewAdapter(screenAddsViewData: ArrayList<ScreenAddsView>) {
+        val adapter = ScreenAddsViewAdapter(this, screenAddsViewData)
+        recyclerViewOfAddsView.adapter = adapter
+
+    }
 
     private fun openSearchPage() {
         val intent = Intent(this, SearchActivity::class.java)
         startActivity(intent)
     }
 
-
-    private fun dataOfAdditionalItems(): ArrayList<Items> {
-
-        val listOfItems = ArrayList<Items>()
-
-
-        listOfItems.add(Items("Weather", R.drawable.portrait))
-        listOfItems.add(Items("Hotels", R.drawable.portrait))
-        listOfItems.add(Items("Currency", R.drawable.portrait))
-        listOfItems.add(Items("Map", R.drawable.portrait))
-        listOfItems.add(Items("Items", R.drawable.portrait))
-
-
+    private fun getScreenViewData(): ArrayList<ScreenView> {
+        val listOfItems = ArrayList<ScreenView>()
+        listOfItems.add(ScreenView("Weather", R.drawable.portrait))
+        listOfItems.add(ScreenView("Hotels", R.drawable.portrait))
+        listOfItems.add(ScreenView("Currency", R.drawable.portrait))
+        listOfItems.add(ScreenView("Map", R.drawable.portrait))
+        listOfItems.add(ScreenView("Items", R.drawable.portrait))
         return listOfItems
-
     }
 
-    private fun additionalItemsAdapter(dataOfItems: ArrayList<Items>) {
-        val adapter = AdditionalsAdapter(this, dataOfItems)
-        recyclerView_itemViews.adapter = adapter
+    private fun refreshScreenViewAdapter(screenViewOfData: ArrayList<ScreenView>) {
+        val adapter = ScreenViewAdapter(this, screenViewOfData)
+        recyclerViewOfItemViews.adapter = adapter
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater = MenuInflater(context)
+        val inflater = this.menuInflater
         inflater.inflate(R.menu.navigationview_bottom_menu, menu)
         return true
     }
@@ -92,6 +109,7 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
+
             R.id.bottom_menu_favorite_id -> {
                 val intent = Intent(this, Bottom_menu_favorite_Activity::class.java)
                 startActivity(intent)
@@ -110,9 +128,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-
         return super.onOptionsItemSelected(menuItem)
     }
-
 
 }
