@@ -21,6 +21,9 @@
     <style name="round_corner_shapeableImageView">
         <item name="cornerSize">14dp</item>
     </style>
+    <style name="round_corners_shapeableImageView">
+        <item name="cornerSize">12dp</item>
+    </style>
 
 
 </resources>

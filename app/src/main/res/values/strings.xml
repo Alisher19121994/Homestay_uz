@@ -14,4 +14,17 @@
     <string name="homeoftext">homeOfText</string>
     <string name="price">price</string>
     <string name="comments">comments</string>
+    <string name="textofhome">textOfHome</string>
+    <string name="profile">Profile</string>
+    <string name="add_profile_photo">Add profile photo</string>
+    <string name="name">Name</string>
+    <string name="profile_registration">Profile registration</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="number">Number</string>
+    <string name="register">Register</string>
+    <string name="Profile">Profile</string>
+    <string name="give_your_adds">Give your Adds</string>
+    <string name="skip">Skip</string>
+    <string name="phone_number">Phone Number</string>
 </resources>

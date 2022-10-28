@@ -1,4 +1,4 @@
-package com.example.homestay_uz.adapters
+package com.example.homestay_uz.adapters.subAdapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import com.example.homestay_uz.R
 import com.example.homestay_uz.models.ScreenView
 import com.google.android.material.imageview.ShapeableImageView
 
-class ScreenViewAdapter(var context: Context, var listOfScreenViews: ArrayList<ScreenView>) :
+class ScreenViewAdapters (var context: Context, var listOfScreenViews: ArrayList<ScreenView>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 
@@ -26,7 +26,7 @@ class ScreenViewAdapter(var context: Context, var listOfScreenViews: ArrayList<S
         if (holder is ScreenViewViewHolder) {
             holder.additionalListOfItemsTextView.text = screenView.additionalListOfItemsTextName
             holder.additionalListOfItemsImageView.setImageResource(screenView.additionalListOfItemsImageView)
-          //  holder.additionalListOfItemsImageView.setOnClickListener {}
+            //  holder.additionalListOfItemsImageView.setOnClickListener {}
         }
     }
 
