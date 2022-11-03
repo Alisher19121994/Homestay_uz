@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#ffffff"
     tools:context=".activities.BottomMenuProfileActivity">
 
@@ -25,18 +25,20 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="16sp"
                     android:gravity="end">
 
-                    <TextView
+                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/onBoarding_skip_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="14dp"
                         android:text="@string/skip"
+                        android:layout_marginTop="8dp"
+                        android:background="#ffffff"
                         android:textAllCaps="false"
-                        android:textColor="#FBC02D"
-                        android:textSize="19sp"
+                        android:textColor="#278CEF"
+                        android:textSize="20sp"
                         android:textStyle="normal" />
                 </LinearLayout>
 
@@ -44,152 +46,88 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:gravity="center_vertical|center_horizontal"
             android:orientation="vertical"
             android:padding="10dp">
 
-            <FrameLayout
-                android:layout_width="220dp"
-                android:layout_height="220dp">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/profile_image_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:padding="5dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/rasm"
-                    app:shapeAppearanceOverlay="@style/circle"
-                    app:strokeColor="#0A9FF1"
-                    app:strokeWidth="3dp" />
-            </FrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_add" />
-
-                <TextView
-                    android:id="@+id/profile_add_photo_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6sp"
-                    android:layout_marginTop="2dp"
-                    android:text="@string/add_profile_photo"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="3dp"
+                android:gravity="center_horizontal"
                 android:orientation="vertical">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/billabong"
+                    android:text="@string/safe_tour_uzbekistan"
+                    android:textAllCaps="false"
+                    android:textColor="#FBC02D"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
 
-                <LinearLayout
+                <EditText
+                    android:id="@+id/onBoarding_firstName_id"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="14sp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/profile_views"
+                    android:hint="@string/first_name"
+                    android:padding="7dp"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    android:textColorHint="#60000000"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/onBoarding_lastName_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="10sp"
-                    android:background="@drawable/profile_views">
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/profile_views"
+                    android:hint="@string/last_name"
+                    android:padding="7dp"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    android:textColorHint="#60000000"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
 
-                    <EditText
-                        android:id="@+id/profile_firstName_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="5dp"
-                        android:hint="@string/first_name"
-                        android:singleLine="true"
-                        android:textAllCaps="false"
-                        android:textColorHint="#C1000000"
-                        android:textSize="16sp"
-                        android:textStyle="normal" />
-                </LinearLayout>
-
-                <LinearLayout
+                <EditText
+                    android:id="@+id/onBoarding_number_id"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="10sp"
-                    android:background="@drawable/profile_views">
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/profile_views"
+                    android:hint="@string/phone_number"
+                    android:inputType="number"
+                    android:padding="7dp"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    android:textColorHint="#60000000"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
 
-                    <EditText
-                        android:id="@+id/profile_lastName_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="5dp"
-                        android:hint="@string/last_name"
-                        android:singleLine="true"
-                        android:textAllCaps="false"
-                        android:textColorHint="#C1000000"
-                        android:textSize="16sp"
-                        android:textStyle="normal" />
-                </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="10sp"
-                    android:background="@drawable/profile_views">
 
-                    <EditText
-                        android:id="@+id/profile_number_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="5dp"
-                        android:hint="@string/phone_number"
-                        android:inputType="number"
-                        android:singleLine="true"
-                        android:textAllCaps="false"
-                        android:textColorHint="#C1000000"
-                        android:textSize="16sp"
-                        android:textStyle="normal" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16sp">
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/profile_register_button_id"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/background_views"
-                        android:hint="@string/register"
-                        android:singleLine="true"
-                        android:textAllCaps="false"
-                        android:textColorHint="#C1000000"
-                        android:textSize="16sp"
-                        android:textStyle="normal" />
-                </LinearLayout>
             </LinearLayout>
-
-
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

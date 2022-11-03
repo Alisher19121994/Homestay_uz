@@ -4,24 +4,25 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
-import android.widget.Toast
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.ViewPager
+import com.example.homestay_uz.FragmentAdapters.FragmentAdapter
+import com.example.homestay_uz.Fragments.FavoriteFragment
+import com.example.homestay_uz.Fragments.HomeFragment
+import com.example.homestay_uz.Fragments.ProfileFragment
+import com.example.homestay_uz.Fragments.UzbekCultureFragment
 import com.example.homestay_uz.R
-import com.example.homestay_uz.adapters.BaseScreenViewAdapter
-import com.example.homestay_uz.models.BaseScreenViews
-import com.example.homestay_uz.models.ScreenAddsView
-
-import com.example.homestay_uz.models.ScreenView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
     private var context: Context? = null
-    private lateinit var recyclerViewOfItemViews: RecyclerView
-    private lateinit var searchForHomeStayOfTextView: TextView
+    private lateinit var searchForSafeTourOfTextView: TextView
+    lateinit var viewPager: ViewPager
+    lateinit var bottomNavigationView: BottomNavigationView
+    lateinit var menuItem: MenuItem
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,100 +32,91 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-
         context = this
-
-        recyclerViewOfItemViews = findViewById(R.id.recyclerview_main_vertical)
-        recyclerViewOfItemViews.layoutManager = GridLayoutManager(this, 1)
-
-
-        searchForHomeStayOfTextView = findViewById(R.id.searchForHomeStayTextView)
-        searchForHomeStayOfTextView.setOnClickListener {
-            openSearchPage()
-        }
-
-
-        refreshBaseScreenViewAdapter(getBaseScreenViewData())
-    }
-
-    private fun getBaseScreenViewData(): ArrayList<BaseScreenViews> {
-        val listOfBaseScreenView = ArrayList<BaseScreenViews>()
-        val listOfScreenView = ArrayList<ScreenView>()
-        val listOfScreenAddsView = ArrayList<ScreenAddsView>()
-
-        listOfBaseScreenView.add(BaseScreenViews(listOfScreenView))
-        for (i in 1..10) {
-            listOfScreenView.add(ScreenView("Weather", R.drawable.portrait))
-        }
-
-        //listOfBaseScreenView.add(BaseScreenViews(listOfScreenAddsView))
-        for (i in 1..10) {
-            listOfBaseScreenView.add(
-                BaseScreenViews(
-                    ScreenAddsView(
-                        R.drawable.h,
-                        "Tashkent city, chilanzar district,home address 5/60",
-                        "$150",
-                        "Room size is 3,The rent house gets included in gas,water,bills and other facilities!"
-                    )
-                )
-            )
-        }
-
-
-
-        return listOfBaseScreenView
-    }
-
-    private fun refreshBaseScreenViewAdapter(baseScreenViewData: ArrayList<BaseScreenViews>) {
-        val adapter = BaseScreenViewAdapter(this, baseScreenViewData)
-        recyclerViewOfItemViews.adapter = adapter
+        initFragments()
+        openSearchPage()
 
     }
 
     private fun openSearchPage() {
+        searchForSafeTourOfTextView = findViewById(R.id.searchForSafeTourTextView)
+        searchForSafeTourOfTextView.setOnClickListener {
+            search()
+        }
+    }
+
+    private fun search() {
         val intent = Intent(this, SearchActivity::class.java)
         startActivity(intent)
     }
 
+    private fun initFragments() {
+        viewPager = findViewById(R.id.viewpager_main_activity_id)
+        bottomNavigationView = findViewById(R.id.bottom_navigation_id)
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater = this.menuInflater
-        inflater.inflate(R.menu.navigationview_bottom_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
+        val fragmentAdapter = FragmentAdapter(fragmentData(), supportFragmentManager)
+        viewPager.adapter = fragmentAdapter
 
-    override fun onOptionsItemSelected(menuItem: MenuItem): Boolean {
-        when (menuItem.itemId) {
-            R.id.bottom_menu_home_id -> {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                Toast.makeText(this, "Home", Toast.LENGTH_LONG).show()
-            }
+        bottomNavigationView.setOnNavigationItemSelectedListener { bottomMenuId ->
 
-            R.id.bottom_menu_favorite_id -> {
-                val intent = Intent(this, Bottom_menu_favorite_Activity::class.java)
-                startActivity(intent)
-                Toast.makeText(this, "Home", Toast.LENGTH_LONG).show()
-            }
-            R.id.bottom_centre_rent_adds_menu_id -> {
-                val intent = Intent(this, Bottom_menu_rent_adds_Activity::class.java)
-                startActivity(intent)
-                Toast.makeText(this, "Home", Toast.LENGTH_LONG).show()
-            }
-            R.id.bottom_menu_notification_id -> {
-                val intent = Intent(this, Bottom_menu_notifications_Activity::class.java)
-                startActivity(intent)
-                Toast.makeText(this, "Home", Toast.LENGTH_LONG).show()
-            }
-            R.id.bottom_menu_profile_id -> {
-                val intent = Intent(this, BottomMenuProfileActivity::class.java)
-                startActivity(intent)
-                Toast.makeText(this, "Home", Toast.LENGTH_LONG).show()
-            }
+            when (bottomMenuId.itemId) {
 
+                R.id.bottom_menu_home_id -> {
+                    viewPager.currentItem = 0
+                }
+
+                R.id.bottom_menu_favorite_id -> {
+                    viewPager.currentItem = 1
+                }
+
+                R.id.bottom_uzbek_culture_menu_id -> {
+                    viewPager.currentItem = 2
+                }
+
+                R.id.bottom_menu_profile_id -> {
+                    viewPager.currentItem = 3
+                }
+
+            }
+            true
         }
-        return super.onOptionsItemSelected(menuItem)
+        viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+
+            }
+
+            override fun onPageSelected(position: Int) {
+
+                if (::menuItem.isInitialized) {
+                    menuItem.isChecked = false
+                } else {
+                    bottomNavigationView.menu.getItem(0).isChecked = false
+
+                }
+                bottomNavigationView.menu.getItem(position).isChecked = true
+                menuItem = bottomNavigationView.menu.getItem(position)
+
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {
+
+            }
+        }
+        )
     }
+
+    private fun fragmentData(): ArrayList<Fragment> {
+        return arrayListOf(
+            HomeFragment.newInstance(),
+            FavoriteFragment.newInstance(),
+            UzbekCultureFragment.newInstance(),
+            ProfileFragment.newInstance()
+        )
+    }
+
 
 }

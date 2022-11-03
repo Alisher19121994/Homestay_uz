@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Homestay.uz</string>
+    <string name="app_name">Safe tour Uzbekistan</string>
     <string name="let_s_get_started">Let\'s get started</string>
     <string name="homestay_uz">Homestay.uz</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -27,4 +27,7 @@
     <string name="give_your_adds">Give your Adds</string>
     <string name="skip">Skip</string>
     <string name="phone_number">Phone Number</string>
+    <string name="uzbek_culture">Uzbek culture</string>
+    <string name="search_for_safe_tour_uzbekistan">Search for Safe tour Uzbekistan</string>
+    <string name="safe_tour_uzbekistan">Safe tour Uzbekistan</string>
 </resources>

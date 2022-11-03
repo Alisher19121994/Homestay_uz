@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/billabong"
-                android:text="@string/homestay_uz"
+                android:text="@string/safe_tour_uzbekistan"
                 android:textAllCaps="false"
                 android:textColor="#F8B91E"
                 android:textSize="42sp"

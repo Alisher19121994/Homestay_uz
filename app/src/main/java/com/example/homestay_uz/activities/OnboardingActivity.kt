@@ -5,21 +5,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.viewpager.widget.ViewPager
-import com.example.homestay_uz.FragmentAdapters.Onboarding
-import com.example.homestay_uz.Fragments.FoundRentHouseFragment
-import com.example.homestay_uz.Fragments.LivingAtHomeFragment
-import com.example.homestay_uz.Fragments.SearchingHomesFragment
+import android.widget.TextView
+import androidx.appcompat.widget.AppCompatButton
 import com.example.homestay_uz.R
-import com.google.android.material.tabs.TabLayout
 
 class OnboardingActivity : AppCompatActivity() {
 
-    private lateinit var viewPager: ViewPager
-    private lateinit var tabLayout: TabLayout
-    private lateinit var button_onboarding: Button
-    private lateinit var onboarding: Onboarding
+
+    private lateinit var skipAppCompatButton: AppCompatButton
     private var context: Context? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding)
@@ -29,25 +24,10 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        context = this
-
-        viewPager = findViewById(R.id.viewpager)
-        tabLayout = findViewById(R.id.tablayout)
-        button_onboarding = findViewById(R.id.button_onboarding_id)
-
-        onboarding = Onboarding(supportFragmentManager)
-
-        onboarding.addFragmentLists(SearchingHomesFragment(), "Searching...")
-        onboarding.addFragmentLists(FoundRentHouseFragment(), "Find out Rents")
-        onboarding.addFragmentLists(LivingAtHomeFragment(), "Residence")
-
-        viewPager.adapter = onboarding
-
-        tabLayout.setupWithViewPager(viewPager)
-
-
-        button_onboarding.setOnClickListener {
+        skipAppCompatButton = findViewById(R.id.onBoarding_skip_id)
+        skipAppCompatButton.setOnClickListener {
             openMainActivity()
+
         }
 
     }
@@ -57,4 +37,24 @@ class OnboardingActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+
+    /**
+     *        <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="90sp"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/onBoarding_register_button_id"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/background_views"
+    android:gravity="center_horizontal|center_vertical"
+    android:text="@string/register"
+    android:textAllCaps="false"
+    android:textColor="#000000"
+    android:textSize="22sp"
+    android:textStyle="normal" />
+    </LinearLayout>**/
 }

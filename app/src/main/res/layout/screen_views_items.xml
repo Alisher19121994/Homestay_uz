@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="4dp"
-    android:layout_marginEnd="4dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="4dp">
 
 
     <LinearLayout
@@ -30,12 +29,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
             android:elevation="0dp"
+            android:padding="1dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/portrait"
             app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView"
             app:strokeColor="#0288D1"
-            android:padding="1dp"
             app:strokeWidth="2dp" />
 
     </LinearLayout>

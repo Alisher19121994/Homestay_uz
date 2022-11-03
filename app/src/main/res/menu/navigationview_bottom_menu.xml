@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/bottom_menu_home_id"
         android:icon="@drawable/ic_baseline_home_24"
+        app:showAsAction="ifRoom"
         android:title="@string/home" />
 
 
@@ -15,19 +17,15 @@
 
 
     <item
-        android:id="@+id/bottom_centre_rent_adds_menu_id"
-        android:icon="@drawable/ic_baseline_add_circle_outline_24"
-        android:title="@string/rent_adds" />
+        android:id="@+id/bottom_uzbek_culture_menu_id"
+        android:icon="@drawable/ic_baseline_local_activity_24"
+        android:title="@string/uzbek_culture" />
 
-    <item
-        android:id="@+id/bottom_menu_notification_id"
-        android:icon="@drawable/ic_baseline_notifications_active_24"
-        android:title="@string/notifications" />
 
     <item
 
         android:id="@+id/bottom_menu_profile_id"
-        android:icon="@drawable/ic_baseline_person_outline_24"
+        android:icon="@drawable/ic_baseline_perm_identity_24"
         android:title="@string/profile" />
 
 </menu>
