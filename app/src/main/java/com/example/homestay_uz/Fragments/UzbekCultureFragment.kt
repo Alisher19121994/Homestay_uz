@@ -10,10 +10,10 @@ import com.example.homestay_uz.R
 class UzbekCultureFragment : Fragment() {
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    companion object {
+        fun newInstance() = UzbekCultureFragment()
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,9 +25,6 @@ class UzbekCultureFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val textView: TextView = view.findViewById(R.id.textCulture)
         textView.text = "textCulture"
-    }
-    companion object {
-        fun newInstance() = UzbekCultureFragment()
     }
 
 }

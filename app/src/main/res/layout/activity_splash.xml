@@ -25,7 +25,7 @@
                 android:fontFamily="@font/billabong"
                 android:text="@string/safe_tour_uzbekistan"
                 android:textAllCaps="false"
-                android:textColor="#F8B91E"
+                android:textColor="#FBB505"
                 android:textSize="42sp"
                 android:textStyle="bold" />
 

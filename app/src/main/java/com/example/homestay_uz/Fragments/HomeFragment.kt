@@ -1,24 +1,27 @@
 package com.example.homestay_uz.Fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homestay_uz.R
-import com.example.homestay_uz.adapters.BaseScreenViewAdapter
-import com.example.homestay_uz.models.BaseScreenViews
-import com.example.homestay_uz.models.MainAdds
-import com.example.homestay_uz.models.ScreenAddsView
-import com.example.homestay_uz.models.ScreenView
+import com.example.homestay_uz.activities.SearchActivity
+import com.example.homestay_uz.adapters.base_adapter.BaseScreenViewAdapter
+import com.example.homestay_uz.models.base_model.BaseScreenViews
+import com.example.homestay_uz.models.base_model.MainAdds
+import com.example.homestay_uz.models.base_model.ScreenAddsView
+import com.example.homestay_uz.models.base_model.ScreenView
 
 
 class HomeFragment : Fragment() {
     private lateinit var recyclerViewOfHomeMenu: RecyclerView
-
+    private lateinit var searchForSafeTourOfTextView: TextView
 
     companion object {
         fun newInstance() = HomeFragment()
@@ -31,24 +34,30 @@ class HomeFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-
-        recyclerViewOfHomeMenu = view.findViewById(R.id.home_fragment_recyclerview_id)
-        recyclerViewOfHomeMenu.layoutManager = GridLayoutManager(context, 1)
-
-        val list = ArrayList<BaseScreenViews>()
-        val adapter = context?.let { BaseScreenViewAdapter(it,list) }
-        recyclerViewOfHomeMenu.adapter = adapter
-        //initViews(view)
+        initViews(view)
         return view
     }
 
     private fun initViews(view: View){
+
         val context :Context?=null
          recyclerViewOfHomeMenu = view.findViewById(R.id.home_fragment_recyclerview_id)
          recyclerViewOfHomeMenu.layoutManager = GridLayoutManager(context, 1)
          refreshBaseScreenViewAdapter(getBaseScreenViewData())
-
+       // openSearchPage()
     }
+   /* private fun openSearchPage() {
+        searchForSafeTourOfTextView = findViewById(R.id.searchForSafeTourTextView)
+        searchForSafeTourOfTextView.setOnClickListener {
+            search()
+        }
+    }
+
+    private fun search() {
+        val intent = Intent(this, SearchActivity::class.java)
+        startActivity(intent)
+    }
+    */
     private fun getBaseScreenViewData(): ArrayList<BaseScreenViews> {
         val listOfBaseScreenView = ArrayList<BaseScreenViews>()
         val listOfScreenView = ArrayList<ScreenView>()

@@ -19,7 +19,7 @@ import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
     private var context: Context? = null
-    private lateinit var searchForSafeTourOfTextView: TextView
+
     lateinit var viewPager: ViewPager
     lateinit var bottomNavigationView: BottomNavigationView
     lateinit var menuItem: MenuItem
@@ -34,21 +34,10 @@ class MainActivity : AppCompatActivity() {
     private fun initViews() {
         context = this
         initFragments()
-        openSearchPage()
+
 
     }
 
-    private fun openSearchPage() {
-        searchForSafeTourOfTextView = findViewById(R.id.searchForSafeTourTextView)
-        searchForSafeTourOfTextView.setOnClickListener {
-            search()
-        }
-    }
-
-    private fun search() {
-        val intent = Intent(this, SearchActivity::class.java)
-        startActivity(intent)
-    }
 
     private fun initFragments() {
         viewPager = findViewById(R.id.viewpager_main_activity_id)
