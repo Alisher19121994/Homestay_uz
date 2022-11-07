@@ -14,17 +14,29 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="270dp"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/splash_homestay.uz_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
                 android:fontFamily="@font/billabong"
-                android:text="@string/safe_tour_uzbekistan"
+                android:text="@string/safe_tour"
                 android:textAllCaps="false"
+                android:textColor="#FBB505"
+                android:gravity="center_horizontal"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/billabong"
+                android:text="@string/uzbekistan"
+                android:textAllCaps="false"
+                android:gravity="center_horizontal"
                 android:textColor="#FBB505"
                 android:textSize="42sp"
                 android:textStyle="bold" />

@@ -7,155 +7,173 @@
     android:background="#ffffff"
     tools:context=".Fragments.ProfileFragment">
 
-
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffffff"
-        app:elevation="0dp">
+        android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:text="@string/profile_registration"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <FrameLayout
+                    android:layout_width="220dp"
+                    android:layout_height="220dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/profile_image_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:padding="5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rasm"
+                        app:shapeAppearanceOverlay="@style/circle"
+                        app:strokeColor="#0A9FF1"
+                        app:strokeWidth="2.5dp" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_add" />
+
+                    <TextView
+                        android:id="@+id/profile_add_photo_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6sp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/add_profile_photo"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal">
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/profile_firstName_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/profile_views"
+                        android:hint="@string/first_name"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:textAllCaps="false"
+                        android:textColorHint="#C1000000"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/profile_lastName_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="12sp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/profile_views"
+                        android:hint="@string/last_name"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:textAllCaps="false"
+                        android:textColorHint="#C1000000"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+
+                    <EditText
+                        android:id="@+id/profile_number_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/profile_views"
+                        android:hint="@string/phone_number"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:textAllCaps="false"
+                        android:textColorHint="#C1000000"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
 
                     <TextView
+                        android:id="@+id/profile_register_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="20dp"
-                        android:text="@string/profile_registration"
+                        android:layout_marginTop="20sp"
+                        android:text="@string/register"
                         android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="19sp"
+                        android:textColor="#27CF2F"
+                        android:textSize="26sp"
                         android:textStyle="bold" />
+
                 </LinearLayout>
 
             </LinearLayout>
-        </androidx.appcompat.widget.Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="vertical"
-        android:padding="10dp">
-
-        <FrameLayout
-            android:layout_width="220dp"
-            android:layout_height="220dp">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/profile_image_id"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:adjustViewBounds="true"
-                android:padding="5dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/rasm"
-                app:shapeAppearanceOverlay="@style/circle"
-                app:strokeColor="#0A9FF1"
-                app:strokeWidth="2.5dp" />
-        </FrameLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_add" />
-
-            <TextView
-                android:id="@+id/profile_add_photo_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="6sp"
-                android:layout_marginTop="2dp"
-                android:text="@string/add_profile_photo"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="19dp"
-            android:layout_marginEnd="3dp"
-            android:orientation="vertical">
-
-
-            <EditText
-                android:id="@+id/profile_firstName_id"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10sp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/profile_views"
-                android:hint="@string/first_name"
-                android:padding="8dp"
-                android:singleLine="true"
-                android:textAllCaps="false"
-                android:textColorHint="#C1000000"
-                android:textSize="16sp"
-                android:textStyle="normal" />
-
-            <EditText
-                android:id="@+id/profile_lastName_id"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="12sp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/profile_views"
-                android:hint="@string/last_name"
-                android:padding="8dp"
-                android:singleLine="true"
-                android:textAllCaps="false"
-                android:textColorHint="#C1000000"
-                android:textSize="16sp"
-                android:textStyle="normal" />
-
-
-            <EditText
-                android:id="@+id/profile_number_id"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10sp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/profile_views"
-                android:hint="@string/phone_number"
-                android:inputType="number"
-                android:padding="8dp"
-                android:singleLine="true"
-                android:textAllCaps="false"
-                android:textColorHint="#C1000000"
-                android:textSize="16sp"
-                android:textStyle="normal" />
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </FrameLayout>

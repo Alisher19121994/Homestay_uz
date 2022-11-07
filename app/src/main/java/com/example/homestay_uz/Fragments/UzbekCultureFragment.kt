@@ -21,10 +21,6 @@ class UzbekCultureFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_uzbek_culture, container, false)
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val textView: TextView = view.findViewById(R.id.textCulture)
-        textView.text = "textCulture"
-    }
+
 
 }

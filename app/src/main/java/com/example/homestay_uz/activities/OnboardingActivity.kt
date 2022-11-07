@@ -12,7 +12,8 @@ import com.example.homestay_uz.R
 class OnboardingActivity : AppCompatActivity() {
 
 
-    private lateinit var skipAppCompatButton: AppCompatButton
+    private lateinit var skipTextView: TextView
+    lateinit var registerTextView: TextView
     private var context: Context? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,14 +25,24 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        skipAppCompatButton = findViewById(R.id.onBoarding_skip_id)
-        skipAppCompatButton.setOnClickListener {
+        skipTextView = findViewById(R.id.onBoarding_skip_id)
+        registerTextView = findViewById(R.id.onBoarding_register_id)
+
+        registerTextView.setOnClickListener {
+            openPageMainActivity()
+        }
+        skipTextView.setOnClickListener {
             openMainActivity()
 
         }
 
     }
 
+    private fun openPageMainActivity() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
     private fun openMainActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)

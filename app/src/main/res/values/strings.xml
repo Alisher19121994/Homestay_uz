@@ -30,4 +30,11 @@
     <string name="uzbek_culture">Uzbek culture</string>
     <string name="safe_tour_uzbekistan">Safe tour Uzbekistan</string>
     <string name="search_for_safe_tour_uzbekistan">Search for safe tour Uzbekistan</string>
+    <string name="safe_tour">Safe Tour</string>
+    <string name="safe_Tour_Uzbekistan">Safe Tour Uzbekistan</string>
+    <string name="foods">Foods</string>
+    <string name="history">History</string>
+    <string name="music_and_art">Music and Art</string>
+    <string name="the_history_of_religion">The history of Religion</string>
+    <string name="uzbekistan">Uzbekistan</string>
 </resources>
