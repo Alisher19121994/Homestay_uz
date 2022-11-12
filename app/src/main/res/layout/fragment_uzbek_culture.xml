@@ -20,26 +20,48 @@
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#60cbcbcb"
                 app:layout_scrollFlags="scroll|enterAlways">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/toolbar_background_views"
                     android:gravity="center_vertical|center_horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/uzbek_culture"
-                        android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:id="@+id/google_search_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
 
+                        <ImageView
+                            android:layout_width="24sp"
+                            android:layout_height="24sp"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/search" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="6dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/google_search"
+                            android:textAllCaps="false"
+                            android:textColor="#77726A"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+                    </LinearLayout>
                 </LinearLayout>
 
             </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cbcbcb" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.core.widget.NestedScrollView
@@ -57,7 +79,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16sp">
+                    android:padding="10sp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -71,16 +93,15 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="230dp"
-                        android:layout_marginTop="10dp"
-                      >
+                        android:layout_marginTop="5dp">
+
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView"
                             android:src="@drawable/foods"
-                            />
+                            app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView" />
 
                     </LinearLayout>
 
@@ -90,7 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16sp">
+                    android:padding="10sp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -104,15 +125,15 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="230dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="5dp">
+
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView"
                             android:src="@drawable/history"
-                            />
+                            app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView" />
 
                     </LinearLayout>
 
@@ -122,7 +143,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16sp">
+                    android:padding="10sp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -136,15 +157,15 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="230dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="5dp">
+
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView"
                             android:src="@drawable/musicsss"
-                            />
+                            app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView" />
 
                     </LinearLayout>
 
@@ -155,7 +176,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16sp">
+                    android:padding="10sp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -169,15 +190,15 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="230dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="5dp">
+
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView"
                             android:src="@drawable/religion"
-                            />
+                            app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView" />
 
                     </LinearLayout>
 
@@ -185,7 +206,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"/>
+                    android:layout_height="80dp" />
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

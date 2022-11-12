@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.HomeFragment">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -45,15 +45,15 @@
                             android:layout_marginStart="6dp"
                             android:src="@drawable/ic_baseline_search_24" />
 
-                        <TextView
+                        <EditText
                             android:id="@+id/searchForSafeTourTextView"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="6dp"
                             android:layout_weight="1"
-                            android:text="@string/search_for_safe_tour_uzbekistan"
+                            android:hint="@string/search_for_safe_tour_uzbekistan"
                             android:textAllCaps="false"
-                            android:textColor="#77726A"
+                            android:textColorHint="#77726A"
                             android:textSize="14sp"
                             android:textStyle="normal"
                             tools:ignore="NestedWeights" />
@@ -86,10 +86,11 @@
                 android:layout_height="1dp"
                 android:background="#cbcbcb" />
         </com.google.android.material.appbar.AppBarLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/home_fragment_recyclerview_id"
@@ -98,7 +99,6 @@
         </LinearLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 
 
 </FrameLayout>

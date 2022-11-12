@@ -43,6 +43,7 @@ dependencies {
 
     // lottie animations
     implementation 'com.airbnb.android:lottie:4.2.2'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
    // implementation 'com.android.volley:volley:1.2.1'
     //implementation 'com.android.gson:Gson:1.2.1'
