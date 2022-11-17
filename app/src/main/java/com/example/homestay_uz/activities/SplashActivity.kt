@@ -12,10 +12,7 @@ import android.widget.TextView
 import com.airbnb.lottie.LottieAnimationView
 import com.example.homestay_uz.R
 
-class SplashActivity : AppCompatActivity() {
-    private var context: Context? = null
-    private var splashTextName: TextView? = null
-    private var splashLottieAnimationView: LottieAnimationView? = null
+class SplashActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,18 +27,32 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
+        // countDownTimer()
+        open()
+    }
 
-        context = this
-
-        splashTextName?.animate()?.translationY(-1400f)?.setDuration(2700)?.startDelay = 0
-        splashLottieAnimationView?.animate()?.translationX(2000f)?.setDuration(2000)?.startDelay = 2900
-
+    fun open() {
         Handler().postDelayed({
-            val intent = Intent(this, OnboardingActivity::class.java)
-            startActivity(intent)
-            finish()
+            call()
+        }, 3000)
+    }
 
-        }, 3600)
+    private fun countDownTimer() {
+        object : CountDownTimer(2000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                call()
+            }
 
+            override fun onFinish() {
+
+            }
+
+        }
+    }
+
+    fun call() {
+        val intent = Intent(this, SignInActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

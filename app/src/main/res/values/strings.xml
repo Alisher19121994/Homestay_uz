@@ -38,4 +38,11 @@
     <string name="the_history_of_religion">The history of Religion</string>
     <string name="uzbekistan">Uzbekistan</string>
     <string name="google_search">google search</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="don_t_you_have_an_account">Don\'t you have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="already_have_an_account">Already have an account?</string>
 </resources>

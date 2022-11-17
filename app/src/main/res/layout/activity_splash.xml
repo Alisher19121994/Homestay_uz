@@ -50,7 +50,7 @@
                 android:layout_marginTop="10sp"
                 android:layout_marginRight="16sp"
                 app:lottie_autoPlay="true"
-                app:lottie_fileName="splashhome.json"
+                app:lottie_fileName="travel.json"
                 app:lottie_loop="true" />
 
         </LinearLayout>
