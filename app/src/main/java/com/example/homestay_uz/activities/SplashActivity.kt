@@ -27,27 +27,22 @@ class SplashActivity : BaseActivity() {
     }
 
     private fun initViews() {
-        // countDownTimer()
-        open()
+         countDownTimer()
+
     }
 
-    fun open() {
-        Handler().postDelayed({
-            call()
-        }, 3000)
-    }
 
     private fun countDownTimer() {
-        object : CountDownTimer(2000, 1000) {
+        object : CountDownTimer(2200, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                call()
+
             }
 
             override fun onFinish() {
-
+                call()
             }
 
-        }
+        }.start()
     }
 
     fun call() {

@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services' //////////////////////////////////////////////////// add this
+
 }
 
 android {
@@ -50,4 +52,9 @@ dependencies {
 
    // implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     //implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //  firebase
+    implementation platform('com.google.firebase:firebase-bom:31.0.3')
+
+    implementation 'com.google.firebase:firebase-auth'
 }
