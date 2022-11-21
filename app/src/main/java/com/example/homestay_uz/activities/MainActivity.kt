@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.example.homestay_uz.FragmentAdapters.FragmentAdapter
@@ -15,14 +16,21 @@ import com.example.homestay_uz.Fragments.ProfileFragment
 import com.example.homestay_uz.Fragments.UzbekCultureFragment
 import com.example.homestay_uz.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
     private var context: Context? = null
 
-    lateinit var viewPager: ViewPager
+    private lateinit var viewPager: ViewPager
     lateinit var bottomNavigationView: BottomNavigationView
     lateinit var menuItem: MenuItem
+
+    private lateinit var floatingPoliceButton: FloatingActionButton
+    private lateinit var floatingMedicalButton: FloatingActionButton
+    private lateinit var floatingMainButton: FloatingActionButton
+    private var isPressedFloatingButton: Boolean = true
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +42,63 @@ class MainActivity : AppCompatActivity() {
     private fun initViews() {
         context = this
         initFragments()
+        getFloatingData()
+    }
 
 
+    private fun getFloatingData() {
+        floatingMainButton = findViewById(R.id.floating_button_main_xlm_id)
+        floatingMedicalButton = findViewById(R.id.floating_button_medical_xlm_id)
+        floatingPoliceButton = findViewById(R.id.floating_button_police_xlm_id)
+
+        floatingMedicalButton.setOnClickListener {
+            infoDialogForEmergencyToMedicine()
+        }
+        floatingPoliceButton.setOnClickListener {
+            infoDialogForEmergencyToPolice()
+        }
+
+
+        floatingMainButton.setOnClickListener {
+            isPressedFloatingButton = if (isPressedFloatingButton) {
+                floatingMedicalButton.show()
+                floatingPoliceButton.show()
+                false
+            } else {
+                floatingMedicalButton.hide()
+                floatingPoliceButton.hide()
+                true
+
+            }
+        }
+    }
+
+    private fun infoDialogForEmergencyToMedicine() {
+        AlertDialog.Builder(this)
+            .setTitle("Emergency call")
+            .setMessage("Medical aid!\n \nDo you need to phone call?")
+            .setPositiveButton(android.R.string.yes) { dialog, which ->
+
+            }
+            .setNegativeButton(android.R.string.no) { dialog, which ->
+                dialog.cancel()
+            }
+            .setIcon(R.drawable.ic_baseline_local_phone_24)
+            .show()
+
+    }
+
+    private fun infoDialogForEmergencyToPolice() {
+        AlertDialog.Builder(this)
+            .setIcon(R.drawable.ic_baseline_local_phone_24)
+            .setTitle("Emergency call")
+            .setMessage("Tour Police aid!\n \nDo you need to phone call?")
+            .setPositiveButton(android.R.string.yes) { dialog, which ->
+            }
+            .setNegativeButton(android.R.string.no) { dialog, which ->
+                dialog.cancel()
+            }
+            .show()
     }
 
 

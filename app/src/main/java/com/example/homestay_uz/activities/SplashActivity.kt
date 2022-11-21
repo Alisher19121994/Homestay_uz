@@ -33,7 +33,7 @@ class SplashActivity : BaseActivity() {
 
 
     private fun countDownTimer() {
-        object : CountDownTimer(2200, 1000) {
+        object : CountDownTimer(3000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
 
             }

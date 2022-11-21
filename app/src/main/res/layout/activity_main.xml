@@ -8,12 +8,66 @@
     tools:context=".activities.MainActivity">
 
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager_main_activity_id"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:orientation="vertical">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager_main_activity_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="60sp"
+                android:gravity="bottom|end">
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floating_button_police_xlm_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#EFF632"
+                    android:src="@drawable/ic_baseline_local_police_24"
+                    android:visibility="gone"
+                    app:elevation="0dp" />
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floating_button_medical_xlm_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#EFF632"
+                    android:src="@drawable/ic_baseline_medical_services_24"
+                    android:visibility="gone"
+                    app:elevation="0dp" />
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floating_button_main_xlm_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#4ADC51"
+                    android:src="@drawable/ic_baseline_add_24"
+                    app:elevation="0dp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -70,6 +70,7 @@ class HomeFragment : Fragment() {
         listOfScreenView.add(ScreenView("Hotels", R.drawable.portrait))
         listOfScreenView.add(ScreenView("Weather", R.drawable.portrait))
         listOfScreenView.add(ScreenView("Currency", R.drawable.portrait))
+        listOfScreenView.add(ScreenView("Online ticket", R.drawable.portrait))
         listOfScreenView.add(ScreenView("Map", R.drawable.portrait))
         listOfScreenView.add(ScreenView("Transport", R.drawable.portrait))
 

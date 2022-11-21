@@ -45,4 +45,6 @@
     <string name="sign_up">Sign Up</string>
     <string name="confirm_password">Confirm password</string>
     <string name="already_have_an_account">Already have an account?</string>
+    <string name="save">Save</string>
+    <string name="modern_uzbekistan">Modern Uzbekistan</string>
 </resources>
