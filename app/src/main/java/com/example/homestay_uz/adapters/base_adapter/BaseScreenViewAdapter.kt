@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -38,7 +39,6 @@ class BaseScreenViewAdapter(
     }
 
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         if (viewType == SCREEN_ADDS_ITEM) {
             val view = LayoutInflater.from(parent.context)
@@ -67,11 +67,15 @@ class BaseScreenViewAdapter(
             baseScreenViews.screenView?.let { refreshScreenViewAdapters(it, recyclerView) }
         }
         if (holder is ScreenFooterViewHolder) {
+
+            val animation =
+                AnimationUtils.loadAnimation(holder.itemView.context, R.anim.translate_main)
+            holder.itemView.startAnimation(animation)
+
             holder.homeOfScreenInImageView.setImageResource(baseScreenViews.screenAddsView!!.addsMainImageView)
             holder.homeOfScreenInTitle.text = baseScreenViews.screenAddsView!!.homeOfScreenInTitle
             holder.homeOfScreenInPrice.text = baseScreenViews.screenAddsView!!.homeOfScreenInPrice
-            holder.homeOfScreenInComment.text =
-                baseScreenViews.screenAddsView!!.homeOfScreenInComment
+            holder.homeOfScreenInComment.text = baseScreenViews.screenAddsView!!.homeOfScreenInComment
         }
     }
 

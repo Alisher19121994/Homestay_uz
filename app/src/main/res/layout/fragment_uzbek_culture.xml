@@ -101,7 +101,7 @@
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/foods"
+                            android:src="@drawable/smart"
                             app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView" />
 
                     </LinearLayout>

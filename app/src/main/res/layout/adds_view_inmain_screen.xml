@@ -9,15 +9,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#cbcbcb"
-        />
+        android:background="#cbcbcb" />
+
     <LinearLayout
         android:id="@+id/linearLayout_adds_vertical_data"
         android:layout_width="match_parent"
         android:layout_height="260dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="6dp"
-        android:layout_marginEnd="10dp">
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        android:focusable="true">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -35,7 +38,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/view_background_screen"
+                android:background="@drawable/background_s"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -90,8 +93,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10sp"
-                        android:text="@string/comments"
                         android:layout_marginEnd="10dp"
+                        android:text="@string/comments"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="10sp"
@@ -104,10 +107,10 @@
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="5dp"
-        android:background="#cbcbcb"
-        />
+        android:background="#cbcbcb" />
 </LinearLayout>

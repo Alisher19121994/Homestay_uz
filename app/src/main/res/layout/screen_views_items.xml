@@ -37,6 +37,6 @@
             app:strokeColor="#0288D1"
             app:strokeWidth="2dp" />
 
-    </LinearLayout>
 
+    </LinearLayout>
 </LinearLayout>

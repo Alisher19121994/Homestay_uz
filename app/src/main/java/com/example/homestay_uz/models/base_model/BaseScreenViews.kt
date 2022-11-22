@@ -27,4 +27,5 @@ class BaseScreenViews {
         this.mainAdds = mainAdds
     }
 
+
 }

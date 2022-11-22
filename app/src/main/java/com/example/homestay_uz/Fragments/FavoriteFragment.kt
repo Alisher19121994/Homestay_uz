@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -43,6 +44,9 @@ class FavoriteFragment : Fragment() {
         recyclerViewOfFavorite.layoutManager = LinearLayoutManager(context)
         refreshFavoriteAdapter(getFavoriteData())
 
+        // val dividerItemDecoration = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
+        //recyclerViewOfFavorite.addItemDecoration(dividerItemDecoration)
+
     }
 
     private fun getFavoriteData(): ArrayList<Favorites> {
@@ -51,7 +55,7 @@ class FavoriteFragment : Fragment() {
             R.drawable.h, "Tashkent city, chilanzar district,home address 5/60", "$150",
             "Room size is 3,The rent house gets included in gas,water,bills and other facilities!"
         )
-        for (index in 1..15) {
+        for (index in 1..100) {
             favoritesOfList.add(favorites)
         }
 
