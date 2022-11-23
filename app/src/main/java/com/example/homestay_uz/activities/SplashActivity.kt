@@ -11,7 +11,14 @@ import android.view.WindowManager
 import android.widget.TextView
 import com.airbnb.lottie.LottieAnimationView
 import com.example.homestay_uz.R
-
+/***
+ *
+ *
+ *
+ *
+ *
+ *
+ * **/
 class SplashActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,7 +5,13 @@ import android.os.Bundle
 import android.widget.TextView
 import com.example.homestay_uz.R
 import com.google.android.material.textfield.TextInputLayout
-
+/**
+ *
+ *
+ *
+ *
+ *
+ * **/
 class SignUpActivity : BaseActivity() {
     lateinit var signUp:TextView
     override fun onCreate(savedInstanceState: Bundle?) {

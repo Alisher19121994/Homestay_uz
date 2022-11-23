@@ -27,7 +27,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import java.util.jar.Manifest
 import kotlin.collections.ArrayList
-
+/**
+ *
+ *
+ *
+ *
+ * **/
 class MainActivity : AppCompatActivity() {
     private var context: Context? = null
 

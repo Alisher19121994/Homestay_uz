@@ -12,7 +12,14 @@ import android.widget.ImageView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.homestay_uz.R
 import java.net.URL
-
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ * **/
 class SearchActivity : AppCompatActivity() {
     lateinit var swipeRefreshLayout: SwipeRefreshLayout
     lateinit var webView: WebView
