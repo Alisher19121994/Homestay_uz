@@ -15,7 +15,12 @@ import com.example.homestay_uz.models.base_model.BaseScreenViews
 import com.example.homestay_uz.models.base_model.MainAdds
 import com.example.homestay_uz.models.base_model.ScreenAddsView
 import com.example.homestay_uz.models.base_model.ScreenView
-
+/**
+ *
+ *
+ *
+ *
+ * **/
 
 class HomeFragment : Fragment() {
     private lateinit var recyclerViewOfHomeMenu: RecyclerView

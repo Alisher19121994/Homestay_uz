@@ -70,13 +70,13 @@
                         android:background="@drawable/toolbar_background_views"
                         android:gravity="center_vertical|center_horizontal">
 
-                        <ImageView
+                        <com.google.android.material.navigation.NavigationView
                             android:id="@+id/homestay_toolbar_more_vertical_id"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="10sp"
-                            android:src="@drawable/ic_baseline_more_vert_24" />
+                            app:menu="@menu/more_data" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>

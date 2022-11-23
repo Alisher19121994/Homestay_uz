@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/more_menu_language_id"
+        android:icon="@drawable/ic_baseline_language_24"
+        android:title="@string/languages">
+
+        <menu>
+            <item
+                android:id="@+id/english_id"
+                android:icon="@drawable/unitedkingdom"
+                android:title="@string/english" />
+
+            <item
+                android:id="@+id/spain_id"
+                android:icon="@drawable/spain"
+                android:title="@string/spanish" />
+
+            <item
+                android:id="@+id/southkorean_id"
+                android:icon="@drawable/southkorean"
+                android:title="@string/korean" />
+
+            <item
+                android:id="@+id/russian_id"
+                android:icon="@drawable/russian"
+                android:title="@string/russian" />
+
+            <item
+                android:id="@+id/japanese_id"
+                android:icon="@drawable/japan"
+                android:title="@string/japanese" />
+
+            <item
+                android:id="@+id/german_id"
+                android:icon="@drawable/german"
+                android:title="@string/german" />
+
+            <item
+                android:id="@+id/french_id"
+                android:icon="@drawable/french"
+                android:title="@string/french" />
+            <item
+                android:id="@+id/chinese_id"
+                android:icon="@drawable/chinese"
+                android:title="@string/chinese" />
+
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/log_out_id"
+        android:icon="@drawable/log_out"
+        android:title="@string/log_out" />
+
+</menu>

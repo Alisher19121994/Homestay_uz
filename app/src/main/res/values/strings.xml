@@ -47,4 +47,14 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="save">Save</string>
     <string name="modern_uzbekistan">Modern Uzbekistan</string>
+    <string name="chinese">Chinese</string>
+    <string name="french">French</string>
+    <string name="german">German</string>
+    <string name="japanese">Japanese</string>
+    <string name="russian">Russian</string>
+    <string name="korean">Korean</string>
+    <string name="spanish">Spanish</string>
+    <string name="english">English</string>
+    <string name="languages">Languages</string>
+    <string name="log_out">Log Out</string>
 </resources>

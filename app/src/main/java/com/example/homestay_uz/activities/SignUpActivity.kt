@@ -1,10 +1,10 @@
 package com.example.homestay_uz.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.example.homestay_uz.R
+import com.google.android.material.textfield.TextInputLayout
 
 class SignUpActivity : BaseActivity() {
     lateinit var signUp:TextView

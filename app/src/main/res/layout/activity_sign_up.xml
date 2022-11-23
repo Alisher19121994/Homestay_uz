@@ -38,70 +38,98 @@
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/firstname_edittext_into_sign_up_id"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="14sp"
                 android:layout_marginEnd="8dp"
-                android:background="@drawable/profile_views"
-                android:hint="@string/first_name"
-                android:padding="7dp"
-                android:singleLine="true"
-                android:textAllCaps="false"
-                android:textColorHint="#60000000"
-                android:textSize="16sp"
-                android:textStyle="normal" />
-            <EditText
+                android:background="@drawable/profile_views">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/first_name"
+                    android:inputType="textPersonName"
+                    android:textAllCaps="false"
+                    android:textColorHint="#60000000"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_edittext_into_sign_up_id"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="14sp"
                 android:layout_marginEnd="8dp"
-                android:background="@drawable/profile_views"
-                android:hint="@string/email"
-                android:padding="7dp"
-                android:singleLine="true"
-                android:textAllCaps="false"
-                android:textColorHint="#60000000"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                android:background="@drawable/profile_views">
 
-            <EditText
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textAllCaps="false"
+                    android:textColorHint="#60000000"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_edittext_into_sign_up_id"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10sp"
+                android:layout_marginTop="14sp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/profile_views"
-                android:hint="@string/password"
-                android:padding="7dp"
-                android:inputType="textPassword"
-                android:singleLine="true"
-                android:textAllCaps="false"
-                android:textColorHint="#60000000"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                app:counterEnabled="true"
+                app:counterMaxLength="12"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true">
 
-            <EditText
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textAllCaps="false"
+                    android:textColorHint="#60000000"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/confirm_password_edittext_into_sign_up_id"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10sp"
+                android:layout_marginTop="14sp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/profile_views"
-                android:hint="@string/confirm_password"
-                android:padding="7dp"
-                android:inputType="textPassword"
-                android:singleLine="true"
-                android:textAllCaps="false"
-                android:textColorHint="#60000000"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                app:counterEnabled="true"
+                app:counterMaxLength="12"
+                app:errorEnabled="true"
+                app:passwordToggleEnabled="true">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    android:textAllCaps="false"
+                    android:textColorHint="#60000000"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/sign_up_textview_button_into_sign_up_id"
