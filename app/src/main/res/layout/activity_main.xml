@@ -33,34 +33,12 @@
 
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floating_button_police_xlm_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:backgroundTint="#EFF632"
-                    android:src="@drawable/ic_baseline_local_police_24"
-                    android:visibility="gone"
-                    app:elevation="0dp" />
-
-
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/floating_button_medical_xlm_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:backgroundTint="#EFF632"
-                    android:src="@drawable/ic_baseline_medical_services_24"
-                    android:visibility="gone"
-                    app:elevation="0dp" />
-
-
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/floating_button_main_xlm_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:backgroundTint="#4ADC51"
-                    android:src="@drawable/ic_baseline_add_24"
+                    android:backgroundTint="#FBC02D"
+                    android:src="@drawable/ic_baseline_local_phone_24"
                     app:elevation="0dp" />
 
             </LinearLayout>

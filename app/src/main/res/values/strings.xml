@@ -57,4 +57,10 @@
     <string name="english">English</string>
     <string name="languages">Languages</string>
     <string name="log_out">Log Out</string>
+    <string name="emergency_call">Emergency call</string>
+    <string name="description">Description</string>
+    <string name="_102">102</string>
+    <string name="tour_police_aid">Tour Police aid</string>
+    <string name="_103">103</string>
+    <string name="medical_aid">Medical aid</string>
 </resources>
