@@ -1,13 +1,11 @@
 package com.example.homestay_uz.adapters.base_adapter.favorite_adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.homestay_uz.Fragments.FavoriteFragment
 import com.example.homestay_uz.R
 import com.example.homestay_uz.models.favorite_model.Favorites
 import com.google.android.material.imageview.ShapeableImageView

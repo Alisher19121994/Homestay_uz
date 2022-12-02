@@ -63,4 +63,12 @@
     <string name="tour_police_aid">Tour Police aid</string>
     <string name="_103">103</string>
     <string name="medical_aid">Medical aid</string>
+    <string name="additional_settings">Additional Settings</string>
+    <string name="the_republic_of_uzbekistan">The Republic of Uzbekistan</string>
+    <string name="fulldata">fullData</string>
+    <string name="fulldataoforregions">fulldataoforregions</string>
+    <string name="the_republic_of_karakalpakistan_and_regions">The Republic of Karakalpakistan and Regions</string>
+    <string name="the_end_of_sovet_era">The end of Sovet era</string>
+    <string name="beginning_of_independence">Beginning of Independence</string>
+    <string name="dataforsovetera">dataforsovetera</string>
 </resources>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context=".Fragments.UzbekCultureFragment">
+    tools:context=".Fragments.menuFragments.UzbekCultureFragment">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -84,9 +84,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="24sp"
                         android:text="@string/modern_uzbekistan"
                         android:textAllCaps="false"
-                        android:layout_marginStart="24sp"
                         android:textColor="@color/black"
                         android:textSize="19sp"
                         android:textStyle="bold" />
@@ -97,9 +97,12 @@
                         android:layout_marginTop="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/modern_uzbekistan_id"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
+                            android:clickable="true"
+                            android:foreground="?selectableItemBackground"
                             android:scaleType="centerCrop"
                             android:src="@drawable/smart"
                             app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView" />
@@ -107,6 +110,7 @@
                     </LinearLayout>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -116,8 +120,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/foods"
                         android:layout_marginStart="24sp"
+                        android:text="@string/foods"
                         android:textAllCaps="false"
                         android:textColor="@color/black"
                         android:textSize="19sp"
@@ -129,9 +133,12 @@
                         android:layout_marginTop="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/foods_id"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
+                            android:clickable="true"
+                            android:foreground="?selectableItemBackground"
                             android:scaleType="centerCrop"
                             android:src="@drawable/foods"
                             app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView" />
@@ -149,10 +156,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="24sp"
                         android:text="@string/history"
                         android:textAllCaps="false"
                         android:textColor="@color/black"
-                        android:layout_marginStart="24sp"
                         android:textSize="19sp"
                         android:textStyle="bold" />
 
@@ -162,9 +169,12 @@
                         android:layout_marginTop="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/history_id"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
+                            android:clickable="true"
+                            android:foreground="?selectableItemBackground"
                             android:scaleType="centerCrop"
                             android:src="@drawable/history"
                             app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView" />
@@ -182,8 +192,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/music_and_art"
                         android:layout_marginStart="24sp"
+                        android:text="@string/music_and_art"
                         android:textAllCaps="false"
                         android:textColor="@color/black"
                         android:textSize="19sp"
@@ -195,9 +205,12 @@
                         android:layout_marginTop="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/modern_art_culture_id"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
+                            android:clickable="true"
+                            android:foreground="?selectableItemBackground"
                             android:scaleType="centerCrop"
                             android:src="@drawable/musicsss"
                             app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView" />
@@ -229,9 +242,12 @@
                         android:layout_marginTop="5dp">
 
                         <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/history_of_religion_id"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:adjustViewBounds="true"
+                            android:clickable="true"
+                            android:foreground="?selectableItemBackground"
                             android:scaleType="centerCrop"
                             android:src="@drawable/religion"
                             app:shapeAppearanceOverlay="@style/round_corner_shapeableImageView" />

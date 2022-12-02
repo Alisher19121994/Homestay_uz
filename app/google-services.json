@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "729457647643",
+    "firebase_url": "https://safe-tour-uzbekistan-16437-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "safe-tour-uzbekistan-16437",
+    "storage_bucket": "safe-tour-uzbekistan-16437.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729457647643:android:1f68c2cda4e05616c318be",
+        "android_client_info": {
+          "package_name": "com.example.homestay_uz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729457647643-63b19noc0k66k14jaj1p326spiieijc5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH5qrwHst3oaQkq0bGnrHBfwJlngs2TMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729457647643-63b19noc0k66k14jaj1p326spiieijc5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

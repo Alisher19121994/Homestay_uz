@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.homestay_uz">
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,15 +17,19 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
 
-        <activity android:name=".activities.CallPhone" />
-        <activity android:name=".activities.ProfileActivity" />
-        <activity android:name=".activities.SearchActivity" />
-        <activity android:name=".activities.SignUpActivity" />
-        <activity android:name=".activities.SignInActivity" />
-        <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.BaseActivity" />
+        <activity android:name=".activities.foods.FoodsActivity" />
+        <activity android:name=".activities.history.HistoryActivity" />
+        <activity android:name=".activities.modernUzbekistan.ModernUzbekistanActivity" />
+        <activity android:name=".activities.musicAndArt.MusicAndArtActivity" />
+        <activity android:name=".activities.additional.CallPhone" />
+        <activity android:name=".activities.additional.ProfileActivity" />
+        <activity android:name=".activities.additional.SearchActivity" />
+        <activity android:name=".activities.initial.SignUpActivity" />
+        <activity android:name=".activities.initial.SignInActivity" />
+        <activity android:name=".activities.base.MainActivity" />
+        <activity android:name=".activities.base.BaseActivity" />
         <activity
-            android:name=".activities.SplashActivity"
+            android:name=".activities.initial.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +38,5 @@
             </intent-filter>
         </activity>
     </application>
-
-
 
 </manifest>
